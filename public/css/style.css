@@ -1,0 +1,37 @@
+
+
+
+.student_table td img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+.student_table td {
+    vertical-align: middle;
+}
+
+
+
+#student_add_form label img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+#student_photo_upload {
+    display: none;
+}
+
+#preview_img {
+    max-width: 100%;
+}
+
+a > i {
+    pointer-events: none;
+}
+

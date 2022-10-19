@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- font-awesome-cdn -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+	<!-- Data-Table-cdn -->
+	<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+	<!-- bootstrap-cdn -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+	<title>student-app with mongodb database</title>
+	<!-- coustom-css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+
+
+<%- body %> 
+
+
+
+	<!-- jquery-cdn -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<!-- Data-Table-cdn -->
+	<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+	<!-- bootstrap-cdn -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		$('.student_table').DataTable();
+
+		// Preview Img-Show.
+		if(student_photo_upload){
+			// Get Elements.
+			const student_photo_upload = document.getElementById('student_photo_upload');
+			const preview_img = document.getElementById('preview_img');
+
+			student_photo_upload.onchange = (e) => {
+				const Img_url = URL.createObjectURL(e.target.files[0]);
+				preview_img.setAttribute('src', Img_url)
+			};
+		};
+
+
+		// Delete btn Manage.
+        const delete_btn = document.querySelectorAll('.delete_btn');
+
+        if(delete_btn){
+            delete_btn.forEach( item => {
+            item.onclick = (e) => {
+                const confirmationAlert = confirm('Are you sure ? you want to delete it.');
+
+                if(confirmationAlert){
+                        return true;
+                    }else{
+                        return false;
+                    };
+                };
+            });
+        };
+
+
+	</script>
+</body>
+</html>

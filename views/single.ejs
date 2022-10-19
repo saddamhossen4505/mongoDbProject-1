@@ -1,0 +1,24 @@
+
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <a class="btn btn-warning" href="/student">Back</a>
+            <br>
+            <br>
+            <div class="card shadow>
+                <div class="card-body">
+                    <div class="singleData text-center my-5">
+                        <img style="width: 300px; height: 300px; border-radius: 50%; object-fit: cover;" src="/studentImages/<%= getSingleStudentData.photo %> " alt="">
+                        <div class="student_info text-center">
+                            <h2> <span>Name : </span> <%= getSingleStudentData.name %> </h2>
+                            <p> <span>Email : </span> <%= getSingleStudentData.email %></p>
+                            <p> <span>Cell : </span> <%= getSingleStudentData.cell %></p>
+                            <p> <span>Gender : </span> <%= getSingleStudentData.gender %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
